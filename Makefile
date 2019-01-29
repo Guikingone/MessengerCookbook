@@ -33,7 +33,7 @@ app-cli:
 	$(APP) sh
 
 cc: var/cache
-	$(SYMFONY) cache:clear
+	$(SYMFONY) cache:clear --env=$(or $(ENV), dev)
 
 rabbit_queues:
 	$(RABBIT_MQ) rabbitmqctl list_queues $(or $(QUEUE), messages)

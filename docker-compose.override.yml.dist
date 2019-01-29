@@ -6,6 +6,7 @@ services:
     ports:
       - 8080:80
 
-  maildev:
+  mailhog:
     ports:
-      - 1080:80
+      - 8025:8025
+      - 1025:1025

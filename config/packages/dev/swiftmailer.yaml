@@ -1,5 +1,5 @@
 swiftmailer:
+    delivery_addresses:
+        - 'random@random-company.test'
     url: '%env(MAILER_SERVER_DEV)%'
     logging: true
-    spool:
-        type: 'memory'

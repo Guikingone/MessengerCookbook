@@ -6,7 +6,7 @@ use App\Messenger\Message\ContactEmailMessage;
 use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 use Twig\Environment;
 
-class ContactEmailHandler implements MessageHandlerInterface
+final class ContactEmailHandler implements MessageHandlerInterface
 {
     private $mailer;
 

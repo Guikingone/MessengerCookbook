@@ -3,5 +3,5 @@ framework:
         transports:
             amqp: '%env(MESSENGER_TRANSPORT_DSN)%'
 
-        #routing:
-            #'App\Messenger\Message\ContactEmailMessage': amqp
+        routing:
+            'App\Messenger\Message\ContactEmailMessage': amqp
