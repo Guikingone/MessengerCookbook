@@ -1,0 +1,10 @@
+{% block form %}
+    {{ form_start(form) }}
+        {{ form_row(form.subject) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.content) }}
+        <button type="submit" class="button">
+            {{- 'app.contact_type.button'|trans -}}
+        </button>
+    {{ form_end(form) }}
+{% endblock %}

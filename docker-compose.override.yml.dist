@@ -5,3 +5,7 @@ services:
   nginx:
     ports:
       - 8080:80
+
+  maildev:
+    ports:
+      - 1080:80

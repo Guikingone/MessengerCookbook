@@ -9,6 +9,8 @@ RUN apk add gosu --update --no-cache --repository http://dl-3.alpinelinux.org/al
     && adduser -D -h /home -s /bin/sh -G bar foo \
     && mkdir -p /srv/app
 
+COPY --from=composer /usr/bin/composer /usr/bin/composer
+
 WORKDIR /srv/app
 
 ADD entrypoint.sh /entrypoint

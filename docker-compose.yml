@@ -22,3 +22,6 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: 'messenger'
       RABBITMQ_DEFAULT_PASS: 'messenger'
+
+  maildev:
+    image: djfarrelly/maildev

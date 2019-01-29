@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Contact page' %}
+
+{% form_theme form '_themes/contact/contact_type.html.twig' %}
+
+{% block body %}
+    <section class="grid-container">
+        {{ form(form) }}
+    </section>
+{% endblock %}
