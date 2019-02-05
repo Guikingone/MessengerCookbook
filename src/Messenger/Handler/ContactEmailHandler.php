@@ -9,7 +9,6 @@ use Twig\Environment;
 final class ContactEmailHandler implements MessageHandlerInterface
 {
     private $mailer;
-
     private $twig;
 
     public function __construct(
@@ -25,11 +24,11 @@ final class ContactEmailHandler implements MessageHandlerInterface
         $payload = $message->getPayload();
 
         $mail = (new \Swift_Message)
-                ->setFrom($payload->email)
-                ->setBody($this->twig->render('emails/contact.html.twig', [
-                    'payload' => $payload,
-                ]), 'text/html')
-                ->setSubject('New message !')
+            ->setFrom($payload->email)
+            ->setBody($this->twig->render('emails/contact.html.twig', [
+                'payload' => $payload,
+            ]), 'text/html')
+            ->setSubject('New message !')
         ;
 
         $this->mailer->send($mail);
