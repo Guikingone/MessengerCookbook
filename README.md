@@ -2,7 +2,7 @@
 
 This project is linked to the Messenger cookbook.
 
-[![SymfonyInsight](https://insight.symfony.com/projects/0faa11b9-4b07-4797-824a-731be7f735a3/small.svg)](https://insight.symfony.com/projects/0faa11b9-4b07-4797-824a-731be7f735a3)
+[![SymfonyInsight](https://insight.symfony.com/projects/7db54303-0a5d-4b27-be1e-c0847bcfd045/small.svg)](https://insight.symfony.com/projects/7db54303-0a5d-4b27-be1e-c0847bcfd045)
 
 ## Quick start
 
