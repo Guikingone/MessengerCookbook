@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  php:
+    build:
+      context: ./docker/php
+    volumes:
+      - ./:/srv/app
+      - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+
+  nginx:
+    depends_on:
+      - php
+    image: nginx:alpine
+    volumes:
+      - ./:/srv/app
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./docker/nginx/messenger.conf:/etc/nginx/conf.d/default.conf
+
+  rabbit_mq:
+    image: rabbitmq:alpine
+    environment:
+      RABBITMQ_DEFAULT_USER: 'messenger'
+      RABBITMQ_DEFAULT_PASS: 'messenger'
+
+  mailhog:
+    image: mailhog/mailhog
